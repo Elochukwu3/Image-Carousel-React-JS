@@ -1,10 +1,11 @@
 import React from 'react';
 import Carousel from './Components/Carousel';
 
-export const App = () => {
+export default function App(){
+    
   return (
     <div>
-       <Carousel/>
+       <Carousel />
     </div>
   )
 }
