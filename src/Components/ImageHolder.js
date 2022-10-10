@@ -1,4 +1,4 @@
-const data = [
+const IMAGES = [
     {
         id: 'carousel1',
         imgSrc: "/images/ai.jpg",
@@ -25,4 +25,4 @@ const data = [
         imgText: 'Good Days',
     },
 ]
-export default data;
+export default IMAGES;
