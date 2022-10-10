@@ -11,7 +11,7 @@
 }
 .containerInner{
  max-width: 700px;
- height: 500px;
+ height: 340px;
  margin:  100px auto 0;
  position: relative;
  overflow: hidden;
@@ -22,7 +22,7 @@
 width: 100%;
 height: 100%;
 position: absolute;
-opacity: 0;
+/* opacity: 0; */
 transition-duration: .6s ease-in-out ;
 
 }

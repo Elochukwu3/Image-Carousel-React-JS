@@ -28,13 +28,12 @@ export default function Carousel() {
               </div>
             );
           })}
-        <div className="btnContainer">
+      </div>
+      <div className="btnContainer">
          
           {/* <Buttons arrowSide ='prev' moveSlide={preSection}/> */}
-          {/* <Buttons arrowSide ='next' moveSlide={nextSection}/> */}
+          <Buttons arrowSide ='next' moveSlide={nextSection}/>
         </div>
-      </div>
-      <button onClick={nextSection}>hello</button>
     </div>
   );
 }
