@@ -55,13 +55,11 @@ transition: background .8s ease-in-out ;
   }
   .view{
     padding: .6rem;
-    background-color: rgb(16, 22, 190);
+    background-color: rgb(106, 110, 218);
     border-radius: 100%;
     border: 2px solid white;
    
   }
   .view.active{
     background-color: black;
-    /* border: 2px solid white; */
-    /* display: none; */
   }

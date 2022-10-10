@@ -9,7 +9,11 @@ const IMAGES = [
         imgSrc: "/images/img1.jpg",
         imgText: 'Imitate Greatness',
     },
-
+    {
+        id: 'carousel3',
+        imgSrc: "/images/img2.jpeg",
+        imgText: 'Be Good',
+    },
     {
         id:' carousel4',
         imgSrc: "/images/img3.jpeg",
@@ -22,8 +26,24 @@ const IMAGES = [
     },
     {
         id: 'carousel6',
-        imgSrc: "/images/img5.webp",
-        imgText: 'Good Days',
+        imgSrc: "/images/img9.webp",
+        imgText: 'Good Times are rare',
     },
+    {
+        id: 'carousel7',
+        imgSrc: "/images/img8.webp",
+        imgText: 'Pray Always',
+    },
+    {
+        id: 'carousel8',
+        imgSrc: "/images/img7.webp",
+        imgText: 'Father help us',
+    },
+    {
+        id: 'carousel9',
+        imgSrc: "/images/img6.jpeg",
+        imgText: 'Good Night',
+    },
+    
 ]
 export default IMAGES;
