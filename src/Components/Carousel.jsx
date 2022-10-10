@@ -10,9 +10,10 @@ export default function Carousel() {
   function preSection() {
     slider === 0 ? setSlider(data.length - 1) : setSlider(slider - 1);
   }
-  const moveDot =(in){
-    setSlider(in)
-  }
+  const dots = Array.from({ length: data.length });
+  const moveDot = (index) => {
+    setSlider(index);
+  };
   return (
     <div className="container">
       <div className="containerInner">
@@ -29,18 +30,18 @@ export default function Carousel() {
             );
           })}
       </div>
-      <div className= 'viewContainer'>
-        {
-          Array.from({length: data.length}).map((m, index)=>{
-            // console.log(slider);
-            // console.log(index);
-          
-           return  <div className={slider === index ? "view active": "view"} key={index} onClick ={moveDot(index)}></div>
-          })
-        }
+      <div className="viewContainer">
+        {dots.map((m, index) => {
+          return (
+            <div
+              className={slider === index ? "view active" : "view"}
+              key={index}
+              onClick={() => moveDot(index)}
+            ></div>
+          );
+        })}
       </div>
       <div className="btnContainer">
-      
         <Buttons arrowSide="prev" moveSlide={preSection} />
         <Buttons arrowSide="next" moveSlide={nextSection} />
       </div>
