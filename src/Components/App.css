@@ -41,6 +41,8 @@
   display: block;
   margin: auto;
   border: unset;
+  background-color: black;
+  color: white;
 }
 .btnContainer {
   padding-top: 1rem;
