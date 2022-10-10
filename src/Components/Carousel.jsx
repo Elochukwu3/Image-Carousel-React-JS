@@ -31,7 +31,7 @@ export default function Carousel() {
       </div>
       <div className="btnContainer">
          
-          {/* <Buttons arrowSide ='prev' moveSlide={preSection}/> */}
+          <Buttons arrowSide ='prev' moveSlide={preSection}/>
           <Buttons arrowSide ='next' moveSlide={nextSection}/>
         </div>
     </div>
