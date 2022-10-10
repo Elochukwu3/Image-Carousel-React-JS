@@ -10,11 +10,6 @@ const IMAGES = [
         imgText: 'Imitate Greatness',
     },
     {
-        id: 'carousel3',
-        imgSrc: "/images/img2.jpeg",
-        imgText: 'Be Good',
-    },
-    {
         id:' carousel4',
         imgSrc: "/images/img3.jpeg",
         imgText: 'Think Big',
