@@ -3,11 +3,11 @@ import data from './ImageHolder';
 import './App.css';
 import Buttons from './Buttons';
 export default function Carousel() {
-    const [slider, setSlider] = useState(0); 
-const nextSection = () =>{
-  setSlider(slider + 1)
+    const [slider, setSlider] = useState(1); 
+function nextSection() {
+  slider !== data.length ? setSlider(slider + 1) : setSlider(0)
   console.log(slider);
-}
+};
   return (
     <div className='container'>
        <div className='containerInner'>
@@ -15,15 +15,15 @@ const nextSection = () =>{
             data.length && data.map((m, index)=> {
                 const {id, imgSrc, imgText} = m;
                 return (
-                <div className= {slider === index ? 'slider.present' : 'slider'} 
+                <div className={slider === index + 1? 'slider.present' : 'slider'} 
                 key={id}>
                   <img src={imgSrc} alt={imgText} />
                 </div>
                 )
             })
         }
-         <Buttons arrowSide ='prev' clickFuntion={nextSection}/>
-           <Buttons arrowSide ='next'/>
+         <Buttons arrowSide ='prev'/>
+           <Buttons arrowSide ='next' clickFuntion={nextSection}/>
        </div>
     </div>
   )
