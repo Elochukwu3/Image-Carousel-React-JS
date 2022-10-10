@@ -4,13 +4,14 @@ import "./App.css";
 import Buttons from "./Buttons";
 export default function Carousel() {
   const [slider, setSlider] = useState(0);
-  // console.log(data.length);
   function nextSection() {
-    slider === data.length - 1 ? setSlider(0) :  setSlider(slider + 1); 
-    // console.log(slider);
+    slider === data.length - 1 ? setSlider(0) : setSlider(slider + 1);
   }
   function preSection() {
-    slider === 0 ? setSlider(data.length - 1) : setSlider(slider - 1)
+    slider === 0 ? setSlider(data.length - 1) : setSlider(slider - 1);
+  }
+  const moveDot =(in){
+    setSlider(in)
   }
   return (
     <div className="container">
@@ -28,11 +29,21 @@ export default function Carousel() {
             );
           })}
       </div>
+      <div className= 'viewContainer'>
+        {
+          Array.from({length: data.length}).map((m, index)=>{
+            // console.log(slider);
+            // console.log(index);
+          
+           return  <div className={slider === index ? "view active": "view"} key={index} onClick ={moveDot(index)}></div>
+          })
+        }
+      </div>
       <div className="btnContainer">
-         
-          <Buttons arrowSide ='prev' moveSlide={preSection}/>
-          <Buttons arrowSide ='next' moveSlide={nextSection}/>
-        </div>
+      
+        <Buttons arrowSide="prev" moveSlide={preSection} />
+        <Buttons arrowSide="next" moveSlide={nextSection} />
+      </div>
     </div>
   );
 }

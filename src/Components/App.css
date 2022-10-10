@@ -49,3 +49,19 @@ transition: background .8s ease-in-out ;
     display: flex;
     
   }
+  .viewContainer{
+    display: flex;
+    justify-content: center;
+  }
+  .view{
+    padding: .6rem;
+    background-color: rgb(16, 22, 190);
+    border-radius: 100%;
+    border: 2px solid white;
+   
+  }
+  .view.active{
+    background-color: black;
+    /* border: 2px solid white; */
+    /* display: none; */
+  }
