@@ -4,7 +4,12 @@ import './App.css';
 import Buttons from './Buttons';
 export default function Carousel() {
     const [slider, setSlider] = useState(1); 
+    console.log(data.length);
 function nextSection() {
+  slider !== data.length ? setSlider(slider + 1) : setSlider(0)
+  console.log(slider);
+};
+function preSection() {
   slider !== data.length ? setSlider(slider + 1) : setSlider(0)
   console.log(slider);
 };
@@ -22,8 +27,10 @@ function nextSection() {
                 )
             })
         }
-         <Buttons arrowSide ='prev'/>
-           <Buttons arrowSide ='next' clickFuntion={nextSection}/>
+         <div className='btnContainer'>
+         <Buttons arrowSide ='prev' moveSlide={preSection}/>
+           <Buttons arrowSide ='next' moveSlide={nextSection}/>
+         </div>
        </div>
     </div>
   )
