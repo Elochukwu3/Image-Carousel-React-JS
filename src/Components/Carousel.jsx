@@ -3,15 +3,14 @@ import data from "./ImageHolder";
 import "./App.css";
 import Buttons from "./Buttons";
 export default function Carousel() {
-  const [slider, setSlider] = useState(1);
+  const [slider, setSlider] = useState(0);
   // console.log(data.length);
   function nextSection() {
-    // slider !== data.length ? setSlider(slider + 1) : setSlider(0);
-    console.log(slider);
+    slider === data.length - 1 ? setSlider(0) :  setSlider(slider + 1); 
+    // console.log(slider);
   }
   function preSection() {
-    // slider !== data.length ? setSlider(slider + 1) : setSlider(0)
-    console.log(slider);
+    slider === 0 ? setSlider(data.length - 1) : setSlider(slider - 1)
   }
   return (
     <div className="container">
@@ -21,7 +20,7 @@ export default function Carousel() {
             const { id, imgSrc, imgText } = m;
             return (
               <div
-                className={slider === index + 1 ? "slider.present" : "slider"}
+                className={slider === index ? "slider.present" : "slider"}
                 key={id}
               >
                 <img src={imgSrc} alt={imgText} />

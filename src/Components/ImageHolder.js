@@ -9,6 +9,7 @@ const IMAGES = [
         imgSrc: "/images/img1.jpg",
         imgText: 'Imitate Greatness',
     },
+
     {
         id:' carousel4',
         imgSrc: "/images/img3.jpeg",
