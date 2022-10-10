@@ -33,7 +33,7 @@ position: absolute;
     opacity: 0;
     transition-duration: 1s ease;
   }
-  .slider.active {
+  .slider.present {
     opacity: 1;
     transition-duration: 1s;
     transform: scale(1.08);

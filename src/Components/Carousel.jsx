@@ -12,7 +12,7 @@ export default function Carousel() {
             data.length && data.map((m, index)=> {
                 const {id, imgSrc, imgText} = m;
                 return (
-                <div className= {slider === index ? 'slider.active' : 'slider'} 
+                <div className= {slider === index ? 'slider.present' : 'slider'} 
                 key={id}>
                   <img src={imgSrc} alt={imgText} />
                  <Buttons arrowSide ='prev'/>
